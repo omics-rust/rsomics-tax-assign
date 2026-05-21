@@ -2,11 +2,11 @@
 name = "rsomics-tax-assign"
 version = "0.1.0"
 description = "Lightweight taxonomic assignment from k-mer LCA — classify reads against a reference taxonomy"
-edition.workspace = true
-rust-version.workspace = true
-license.workspace = true
-repository.workspace = true
-authors.workspace = true
+edition = "2024"
+rust-version = "1.91"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/omics-rust/rsomics-world"
+authors = ["Zane Leong <efd@live.com>"]
 
 [[bin]]
 name = "rsomics-tax-assign"
@@ -17,12 +17,10 @@ name = "rsomics_tax_assign"
 path = "src/lib.rs"
 
 [dependencies]
-rsomics-common = { path = "../../../foundation/rsomics-common", version = "0.6" }
-rsomics-help = { path = "../../../foundation/rsomics-help", version = "0.3" }
-rsomics-taxonomy = { path = "../../../foundation/rsomics-taxonomy", version = "0.1" }
-rsomics-kmer = { path = "../../../foundation/rsomics-kmer", version = "0.2" }
-clap.workspace = true
+rsomics-common = { version = "0.6" }
+rsomics-help = { version = "0.3" }
+rsomics-taxonomy = { version = "0.1" }
+rsomics-kmer = { version = "0.2" }
+clap = { version = "4", features = ["derive"] }
 needletail = { version = "0.7", default-features = false, features = ["compression"] }
 
-[lints]
-workspace = true
